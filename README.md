@@ -5,6 +5,7 @@ To set up and run this project, follow these steps:
 ### 1. Clone the Repository
 ```bash
 git clone <repository-url>
+cd Shape2Fashion
 ```
 ### 2. Install the required dependencies
 ```bash

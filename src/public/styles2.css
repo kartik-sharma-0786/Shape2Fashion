@@ -1,0 +1,114 @@
+:root {
+    --primary-color: #fff; /* White text and elements */
+    --secondary-color: #140202; /* Dark background */
+    --highlight-color: #4a90e2; /* Blue highlight color */
+    --border-radius: 8px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    padding: 0;
+    
+    
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #e7d5d5;
+    margin-bottom: 20px;
+}
+
+.displayed-image {
+    width: 150px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+/* Container for each image and tag */
+.item-container {
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+/* Styling for the displayed image */
+.displayed-image {
+    width: 150px; /* Set a fixed width */
+    height: 250px; /* Set a fixed height to maintain uniformity */
+    object-fit: cover; /* Ensure the image fits within the set dimensions without distortion */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+
+}
+
+/* Styling for the alt text below each image */
+.image-tag {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #ddd;
+    text-align: center;
+    
+}
+
+/* #jacket .displayed-image {
+    border: 2px solid blue;
+}
+
+#shirt .displayed-image {
+    border: 2px solid green;
+}
+
+#dress .displayed-image {
+    border: 2px solid purple;
+}
+
+#pants .displayed-image {
+    border: 2px solid red;
+}
+
+#skirt .displayed-image {
+    border: 2px solid rgb(149, 255, 0);
+} */
+
+
+
+#resultsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Category section styling */
+.category-section {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Category title styling */
+.category-section h2 {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Grid layout for item containers */
+.category-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four images per row */
+    gap: 10px;
+}
+

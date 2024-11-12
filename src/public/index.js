@@ -1,18 +1,28 @@
 const imgElement = document.getElementById("imgsrc");
 const fileElement = document.getElementById("fileInput") ;
 const analyseBtn = document.getElementById("analyse");
+var selectedItems=[];
 
 fileElement.addEventListener("change" , (e)=>{
 	imgElement.src = URL.createObjectURL(e.target.files[0]);
 });
 
 
-
 analyseBtn.addEventListener('click' , function(event){	
 	event.preventDefault();
+	const checkboxes = document.querySelectorAll('input[name="wearType"]:checked');
+	// Create an array of the values of the checked checkboxes
+	 selectedItems = Array.from(checkboxes).map(checkbox => checkbox.value);
+	
+	// Output the selected items
+	console.log(selectedItems); 
 	const file = fileElement?.files[0];
 	uploadFile(file);
+
+	
+
 });
+
 
 function uploadFile(file)
 {
@@ -31,10 +41,48 @@ function uploadFile(file)
 	})
 	.then(response => {
 			console.log("file upload successfull" , response.data);
+			const predictionArray = response.data.prediction[0];  
+			const highestValueIndex = predictionArray.indexOf(Math.max(...predictionArray));
+			console.log("Index of highest value:", highestValueIndex);  
+			const highestValue = predictionArray[highestValueIndex];
+			console.log("Highest value:", highestValue);
+			const bodyShapeMap = [
+				"rectangle",       // 0
+				"apple",           // 1
+				"InvertedTriangle", // 2
+				"hourglass",       // 3
+				"pear"             // 4
+			];
+
+			const bodyShape = bodyShapeMap[highestValueIndex];
+			//res.json({ bodyShape, predictionData: response.data });
+
+
+			console.log("Body shape:", bodyShape);
+
+       
+		
+		
+		const payload = {
+			bodyShape: bodyShape,
+			items: selectedItems
+		};
+		
+		axios.post('/dresses', payload, {
+			headers: {
+				'Content-Type': 'application/json'
+			}
 		})
+		.then(response => {
+			console.log("Payload successfully sent");
+		})
+		.catch(error => {
+			console.log('Error:', error);
+		})
+	})
+		
 	.catch(error => {
 			console.log('Error:', error);
 		});
 }
-
 

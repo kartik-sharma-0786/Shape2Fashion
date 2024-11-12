@@ -16,11 +16,9 @@ dress,apple,./Apple/8.jpg
 dress,apple,./Apple/2.jpg
 dress,apple,./Apple/25.jpg
 dress,apple,./Apple/21.jpg
-skirt,apple,./Apple/21.jpg
 shirt,apple,./Apple/3.jpg
 pants,apple,./Apple/3.jpg
 dress,apple,./Apple/13.jpg
-skirt,apple,./Apple/13.jpg
 dress,apple,./Apple/10.jpg
 shirt,apple,./Apple/10.jpg
 dress,apple,./Apple/12.jpg
@@ -30,8 +28,6 @@ jacket,apple,./Apple/20.jpg
 jacket,apple,./Apple/11.jpg
 dress,apple,./Apple/11.jpg
 pants,apple,./Apple/28.jpg
-jacket,apple,./Apple/28.jpg
-shirt,apple,./Apple/28.jpg
 shirt,apple,./Apple/24.jpg
 pants,apple,./Apple/24.jpg
 dress,apple,./Apple/19.jpg
@@ -50,12 +46,9 @@ dress,apple,./Apple/1.jpg
 dress,apple,./Apple/29.jpg
 dress,apple,./Apple/15.jpg
 skirt,apple,./Apple/18.jpg
-jacket,apple,./Apple/18.jpg
-shirt,apple,./Apple/18.jpg
 skirt,apple,./Apple/22.jpg
 shirt,apple,./Apple/22.jpg
 jacket,apple,./Apple/6.jpg
-pants,apple,./Apple/6.jpg
 dress,rectangle,./Rectangle/26.jpg
 dress,rectangle,./Rectangle/17.jpg
 pants,rectangle,./Rectangle/17.jpg
@@ -84,7 +77,6 @@ dress,rectangle,./Rectangle/12.jpg
 dress,rectangle,./Rectangle/27.jpg
 shirt,rectangle,./Rectangle/20.jpg
 pants,rectangle,./Rectangle/20.jpg
-skirt,rectangle,./Rectangle/11.jpg
 dress,rectangle,./Rectangle/28.jpg
 jacket,rectangle,./Rectangle/24.jpg
 pants,rectangle,./Rectangle/24.jpg
@@ -92,7 +84,6 @@ shirt,rectangle,./Rectangle/24.jpg
 shirt,rectangle,./Rectangle/19.jpg
 pants,rectangle,./Rectangle/19.jpg
 skirt,rectangle,./Rectangle/23.jpg
-dress,rectangle,./Rectangle/23.jpg
 dress,rectangle,./Rectangle/30.jpg
 dress,rectangle,./Rectangle/4.jpg
 skirt,rectangle,./Rectangle/5.jpg
@@ -107,23 +98,15 @@ shirt,rectangle,./Rectangle/18.jpg
 pants,rectangle,./Rectangle/18.jpg
 dress,rectangle,./Rectangle/31.jpg
 skirt,rectangle,./Rectangle/31.jpg
-pants,rectangle,./Rectangle/31.jpg
-shirt,rectangle,./Rectangle/31.jpg
 pants,rectangle,./Rectangle/22.jpg
 shirt,rectangle,./Rectangle/22.jpg
-pants,rectangle,./Rectangle/6.jpg
-dress,rectangle,./Rectangle/6.jpg
 jacket,hourglass,./Hourglass/Jennifer Lopez5.png
-shirt,hourglass,./Hourglass/Jennifer Lopez5.png
 dress,hourglass,./Hourglass/Jennifer Lopez2.jpg
 pants,hourglass,./Hourglass/Jennifer Lopez2.jpg
 pants,hourglass,./Hourglass/Kate Winslet9.jpg
 jacket,hourglass,./Hourglass/Kate Winslet9.jpg
 shirt,hourglass,./Hourglass/Kate Winslet9.jpg
-jacket,hourglass,./Hourglass/Kate Winslet9.jpg
 jacket,hourglass,./Hourglass/Jennifer Lopez1.png
-skirt,hourglass,./Hourglass/Jennifer Lopez1.png
-shirt,hourglass,./Hourglass/Jennifer Lopez1.png
 dress,hourglass,./Hourglass/Salma Hayek3.jpg
 skirt,hourglass,./Hourglass/Salma Hayek8.png
 dress,hourglass,./Hourglass/Salma Hayek8.png
@@ -136,13 +119,9 @@ pants,hourglass,./Hourglass/Salma Hayek5.jpg
 dress,hourglass,./Hourglass/Jennifer Lopez3.jpg
 jacket,hourglass,./Hourglass/Jennifer Lopez3.jpg
 skirt,hourglass,./Hourglass/Salma Hayek4.png
-shirt,hourglass,./Hourglass/Sofia Vergena2.jpg
-skirt,hourglass,./Hourglass/Sofia Vergena2.jpg
-dress,hourglass,./Hourglass/Sofia Vergena1.png
 pants,hourglass,./Hourglass/Salma Hayek9.png
 shirt,hourglass,./Hourglass/Salma Hayek9.png
 dress,hourglass,./Hourglass/Salma Hayek6.jpg
-shirt,hourglass,./Hourglass/Salma Hayek6.jpg
 skirt,hourglass,./Hourglass/Emilia Clarke3.png
 shirt,hourglass,./Hourglass/Emilia Clarke3.png
 shirt,hourglass,./Hourglass/Salma Hayek2.png
@@ -156,71 +135,10 @@ shirt,hourglass,./Hourglass/Salma Hayek10.jpg
 dress,hourglass,./Hourglass/Salma Hayek1.jpg
 skirt,hourglass,./Hourglass/Jennifer Lopez4.png
 dress,hourglass,./Hourglass/Jennifer Lopez4.png
-shirt,hourglass,./Hourglass/Jennifer Lopez4.png
-skirt,pear,./Pear/Eva Mendes2.jpeg
-dress,pear,./Pear/Eva Mendes2.jpeg
-shirt,pear,./Pear/Mindy Kaling3.png
-skirt,pear,./Pear/Mindy Kaling3.png
-dress,pear,./Pear/Mindy Kaling3.png
-skirt,pear,./Pear/Eva Mendes5.png
-skirt,pear,./Pear/Eva Mendes5.png
-shirt,pear,./Pear/Eva Mendes6.jpg
-pants,pear,./Pear/Eva Mendes6.jpg
-pants,pear,./Pear/Alicia Keys3.jpg
-shirt,pear,./Pear/Mindy Kaling2.png
-jacket,pear,./Pear/Drew Barrymore2.jpg
-pants,pear,./Pear/Drew Barrymore2.jpg
-shirt,pear,./Pear/Drew Barrymore2.jpg
-jacket,pear,./Pear/Mindy Kaling6.jpg
-jacket,pear,./Pear/Mindy Kaling6.jpg
-skirt,pear,./Pear/Meghan Trainor4.jpg
-shirt,pear,./Pear/Meghan Trainor4.jpg
-dress,pear,./Pear/Meghan Trainor4.jpg
-dress,pear,./Pear/Drew Barrymore4.jpg
-skirt,pear,./Pear/Meghan Trainor5.jpg
-jacket,pear,./Pear/Meghan Trainor5.jpg
-shirt,pear,./Pear/Meghan Trainor5.jpg
-dress,pear,./Pear/Meghan Trainor2.jpg
-jacket,pear,./Pear/Meghan Trainor2.jpg
-pants,pear,./Pear/Mindy Kaling5.jpeg
-jacket,pear,./Pear/Mindy Kaling5.jpeg
-shirt,pear,./Pear/Mindy Kaling5.jpeg
-jacket,pear,./Pear/Alicia Keys6.jpg
-pants,pear,./Pear/Alicia Keys6.jpg
-shirt,pear,./Pear/Alicia Keys6.jpg
-pants,pear,./Pear/Mindy Kaling1.jpg
-jacket,pear,./Pear/Mindy Kaling1.jpg
-pants,pear,./Pear/Alicia Keys5.jpg
-jacket,pear,./Pear/Alicia Keys5.jpg
-dress,pear,./Pear/Drew Barrymore6.jpg
-shirt,pear,./Pear/Alicia Keys1.jpg
-dress,pear,./Pear/Eva Mendes3.png
-skirt,pear,./Pear/Meghan Trainor1.jpg
-shirt,pear,./Pear/Meghan Trainor1.jpg
-pants,pear,./Pear/Alicia Keys2.jpg
-pants,pear,./Pear/Eva Mendes4.jpg
-shirt,pear,./Pear/Eva Mendes4.jpg
-pants,pear,./Pear/Drew Barrymore5.jpg
-jacket,pear,./Pear/Drew Barrymore5.jpg
-shirt,pear,./Pear/Drew Barrymore5.jpg
-skirt,pear,./Pear/Drew Barrymore1.jpg
-dress,pear,./Pear/Drew Barrymore1.jpg
-dress,pear,./Pear/Eva Mendes1.jpg
-dress,pear,./Pear/Mindy Kaling4.png
-dress,pear,./Pear/Meghan Trainor3.jpg
-
 dress,InvertedTriangle,./InvertedTriangle/2.png
 dress,InvertedTriangle,./InvertedTriangle/2.png
 shirt,InvertedTriangle,./InvertedTriangle/2.png
 pants,InvertedTriangle,./InvertedTriangle/2.png
-shirt,InvertedTriangle,./InvertedTriangle/2.png
-jacket,InvertedTriangle,./InvertedTriangle/2.png
-skirt,InvertedTriangle,./InvertedTriangle/17.jpg
-shirt,InvertedTriangle,./InvertedTriangle/17.jpg
-shirt,InvertedTriangle,./InvertedTriangle/9.jpg
-pants,InvertedTriangle,./InvertedTriangle/9.jpg
-jacket,InvertedTriangle,./InvertedTriangle/9.jpg
-jacket,InvertedTriangle,./InvertedTriangle/14.jpg
 shirt,InvertedTriangle,./InvertedTriangle/7.jpg
 pants,InvertedTriangle,./InvertedTriangle/7.jpg
 jacket,InvertedTriangle,./InvertedTriangle/Bo Derek2.jpg
@@ -231,41 +149,67 @@ dress,InvertedTriangle,./InvertedTriangle/Bo Derek4.jpg
 jacket,InvertedTriangle,./InvertedTriangle/Bo Derek4.jpg
 skirt,InvertedTriangle,./InvertedTriangle/3.jpg
 pants,InvertedTriangle,./InvertedTriangle/3.jpg
-jacket,InvertedTriangle,./InvertedTriangle/3.jpg
-jacket,InvertedTriangle,./InvertedTriangle/3.jpg
 dress,InvertedTriangle,./InvertedTriangle/13.jpg
 pants,InvertedTriangle,./InvertedTriangle/10.jpg
 shirt,InvertedTriangle,./InvertedTriangle/10.jpg
 pants,InvertedTriangle,./InvertedTriangle/12.jpg
 shirt,InvertedTriangle,./InvertedTriangle/12.jpg
-jacket,InvertedTriangle,./InvertedTriangle/Bo Derek6.jpg
 shirt,InvertedTriangle,./InvertedTriangle/11.jpg
 pants,InvertedTriangle,./InvertedTriangle/Bo Derek1.jpg
-jacket,InvertedTriangle,./InvertedTriangle/Bo Derek1.jpg
 dress,InvertedTriangle,./InvertedTriangle/Pink4.png
 shirt,InvertedTriangle,./InvertedTriangle/19.jpg
-shorts,InvertedTriangle,./InvertedTriangle/19.jpg
 skirt,InvertedTriangle,./InvertedTriangle/Pink6.jpg
 shirt,InvertedTriangle,./InvertedTriangle/Pink6.jpg
-jacket,InvertedTriangle,./InvertedTriangle/Bo Derek5.jpg
-dress,InvertedTriangle,./InvertedTriangle/Bo Derek5.jpg
 dress,InvertedTriangle,./InvertedTriangle/5.jpg
 dress,InvertedTriangle,./InvertedTriangle/Pink3.jpg
 dress,InvertedTriangle,./InvertedTriangle/1.png
 dress,InvertedTriangle,./InvertedTriangle/1.png
 shirt,InvertedTriangle,./InvertedTriangle/1.png
 pants,InvertedTriangle,./InvertedTriangle/1.png
-shirt,InvertedTriangle,./InvertedTriangle/1.png
-jacket,InvertedTriangle,./InvertedTriangle/1.png
 shirt,InvertedTriangle,./InvertedTriangle/Pink2.jpg
-jacket,InvertedTriangle,./InvertedTriangle/Pink2.jpg
 shirt,InvertedTriangle,./InvertedTriangle/16.jpg
 skirt,InvertedTriangle,./InvertedTriangle/16.jpg
 pants,InvertedTriangle,./InvertedTriangle/16.jpg
-dress,InvertedTriangle,./InvertedTriangle/15.jpg
 dress,InvertedTriangle,./InvertedTriangle/18.jpg
-skirt,InvertedTriangle,./InvertedTriangle/Pink1.jpg
 dress,InvertedTriangle,./InvertedTriangle/Pink5.jpg
 shirt,InvertedTriangle,./InvertedTriangle/6.jpg
 jacket,InvertedTriangle,./InvertedTriangle/6.jpg
 pants,InvertedTriangle,./InvertedTriangle/6.jpg
+skirt,pear,./Pear/Eva Mendes2.jpeg
+dress,pear,./Pear/Eva Mendes2.jpeg
+shirt,pear,./Pear/Mindy Kaling3.png
+pants,pear,./Pear/Alicia Keys3.jpg
+jacket,pear,./Pear/Drew Barrymore2.jpg
+pants,pear,./Pear/Drew Barrymore2.jpg
+shirt,pear,./Pear/Drew Barrymore2.jpg
+jacket,pear,./Pear/Mindy Kaling6.jpg
+jacket,pear,./Pear/Mindy Kaling6.jpg
+skirt,pear,./Pear/Meghan Trainor4.jpg
+shirt,pear,./Pear/Meghan Trainor4.jpg
+dress,pear,./Pear/Drew Barrymore4.jpg
+skirt,pear,./Pear/Meghan Trainor5.jpg
+jacket,pear,./Pear/Meghan Trainor5.jpg
+dress,pear,./Pear/Meghan Trainor2.jpg
+jacket,pear,./Pear/Meghan Trainor2.jpg
+pants,pear,./Pear/Mindy Kaling5.jpeg
+jacket,pear,./Pear/Mindy Kaling5.jpeg
+shirt,pear,./Pear/Mindy Kaling5.jpeg
+jacket,pear,./Pear/Alicia Keys6.jpg
+pants,pear,./Pear/Alicia Keys6.jpg
+shirt,pear,./Pear/Alicia Keys6.jpg
+pants,pear,./Pear/Mindy Kaling1.jpg
+pants,pear,./Pear/Alicia Keys5.jpg
+jacket,pear,./Pear/Alicia Keys5.jpg
+dress,pear,./Pear/Eva Mendes3.png
+skirt,pear,./Pear/Meghan Trainor1.jpg
+shirt,pear,./Pear/Meghan Trainor1.jpg
+pants,pear,./Pear/Alicia Keys2.jpg
+pants,pear,./Pear/Eva Mendes4.jpg
+pants,pear,./Pear/Drew Barrymore5.jpg
+jacket,pear,./Pear/Drew Barrymore5.jpg
+shirt,pear,./Pear/Drew Barrymore5.jpg
+skirt,pear,./Pear/Drew Barrymore1.jpg
+dress,pear,./Pear/Drew Barrymore1.jpg
+dress,pear,./Pear/Eva Mendes1.jpg
+dress,pear,./Pear/Mindy Kaling4.png
+dress,pear,./Pear/Meghan Trainor3.jpg

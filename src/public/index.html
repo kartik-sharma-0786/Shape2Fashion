@@ -5,29 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Body measurements</title>
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+		<link rel="stylesheet" href="styles.css">
     <script src="index.js" defer></script>
 		<script src="mediaDevice.js" defer></script>
 </head>
 <body>
     <h1>Welcome to Body measurement site</h1>
-
+	<div class="big">
+		<div class="container">
 			<div class="camera">
-		  <video id="video">Video stream not available.</video>
-				<button id="startbutton">Take photo</button>
-			</div>
-			<canvas id="canvas"> </canvas>
-			<div class="output">
-			<img id="photo" alt="The screen capture will appear in this box." />
-			</div>
-		<form method="POST" enctype="multipart/form-data" >
-      <div class="inputoutput">
-      To upload a picture 
-      <img id = "imgsrc" alt="no image" />
-      <div class="caption">image Src <input type="file" id="fileInput" name="file" /></div>
-				<button id = "analyse" type= "submit">Analyse</button>
-			</div>
-		</form>
+				<video id="video">Video stream not available.</video>
+					  <button id="startbutton">Take photo</button>
+				  </div>
+				  <canvas id="canvas"> </canvas>
+				  <div class="output">
+				  <img id="photo" alt="The screen capture will appear in this box." />
+				  </div>
+				  <div class="small">
+					<form method="POST" enctype="multipart/form-data" >
+						<div class="inputoutput">
+						To upload a picture 
+						<img id = "imgsrc" alt="no image" />
+						<div class="caption">image Src <input type="file" id="fileInput" name="file" /></div>
+						
+				
+					</div>
+							
+					  <div class="caption">
+						<p>What do you want to wear:</p>
+						<label><input type="checkbox" name="wearType" value="jacket"> jacket</label>
+						<label><input type="checkbox" name="wearType" value="shirt"> shirt</label>
+						<label><input type="checkbox" name="wearType" value="dress"> dress</label>
+						<label><input type="checkbox" name="wearType" value="pants"> pants</label>
+						<label><input type="checkbox" name="wearType" value="shoes"> skirt</label>
+						<label><input type="checkbox" name="wearType" value="bag"> Bag</label>
+					</div>
+								<button id = "analyse" type= "submit">Analyse</button>
+							</div>
+						</form>		
+				  </div>
+			 
+
+	</div>
+    
 
 </body>
 </html>
+
+
 

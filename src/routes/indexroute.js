@@ -75,19 +75,31 @@ router.post("/dresses", async (req, res) => {
     });
     });
 
-
-
-
-
-   
-
-
-
-
-// router.get('/dresses',async (req, res) => {
+    // router.get("/dresses", async (req, res) => {
+    //     const { bodyShape, items } = req.query;
     
- //});  // to display the final photos
-
+    //     if (!bodyShape || !items) {
+    //         return res.status(400).json({ error: "Missing bodyShape or items query parameters" });
+    //     }
+    
+    //     try {
+    //         // Convert items to an array if it’s not already (handles single item as a string)
+    //         const itemsArray = Array.isArray(items) ? items : [items];
+    
+    //         // Send the query parameters to the Flask server
+    //         const flaskResponse = await axios.get("http://127.0.0.1:5000/query", {
+    //             params: { bodyShape, items: itemsArray },
+    //             headers: { "Content-Type": "application/json" }
+    //         });
+    
+    //         console.log("GET Response from Flask:", flaskResponse.data);
+    //         res.json({ message: "Data retrieved successfully", flaskData: flaskResponse.data });
+    //     } catch (error) {
+    //         console.error("Error in GET request to Flask:", error);
+    //         res.status(500).json({ error: "Error retrieving data" });
+    //     }
+    // });
+    
 
 
 module.exports = router;

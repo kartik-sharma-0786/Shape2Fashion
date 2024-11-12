@@ -1,6 +1,9 @@
+
+
 const imgElement = document.getElementById("imgsrc");
 const fileElement = document.getElementById("fileInput") ;
 const analyseBtn = document.getElementById("analyse");
+
 var selectedItems=[];
 
 fileElement.addEventListener("change" , (e)=>{
@@ -73,16 +76,31 @@ function uploadFile(file)
 				'Content-Type': 'application/json'
 			}
 		})
-		.then(response => {
-			console.log("Payload successfully sent");
-		})
-		.catch(error => {
-			console.log('Error:', error);
-		})
+	// 	.then(response => {
+	// 		console.log("Payload successfully sent");
+	// 	})
+	// 	.catch(error => {
+	// 		console.log('Error:', error);
+	// 	})
+	// })
+	.then((response) => {
+		console.log("Response from /dresses:", response.data);
+		
+		// Store the data in localStorage
+		localStorage.setItem("dressesData", JSON.stringify(response.data.flaskData.data));
+		console.log("Data saved to localStorage:", localStorage.getItem("dressesData"));
+
+		// Redirect to results.html
+		
+	
+		window.location.href = "results.html";
 	})
+	.catch((error) => {
+		console.log("Error:", error);
+	});
+})
 		
 	.catch(error => {
 			console.log('Error:', error);
 		});
 }
-

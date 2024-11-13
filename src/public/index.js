@@ -1,10 +1,16 @@
+
+
 const imgElement = document.getElementById("imgsrc");
 const fileElement = document.getElementById("fileInput") ;
 const analyseBtn = document.getElementById("analyse");
 <<<<<<< HEAD
+<<<<<<< HEAD
 var bdindex = 0;
 var array;
 =======
+=======
+
+>>>>>>> ba3af46a4fc4a68d219d8d3fed0fc1e33ce7e59c
 var selectedItems=[];
 >>>>>>> 48fd57bd18dfacb002d566a3d6b7b51232124e55
 
@@ -78,16 +84,31 @@ function uploadFile(file)
 				'Content-Type': 'application/json'
 			}
 		})
-		.then(response => {
-			console.log("Payload successfully sent");
-		})
-		.catch(error => {
-			console.log('Error:', error);
-		})
+	// 	.then(response => {
+	// 		console.log("Payload successfully sent");
+	// 	})
+	// 	.catch(error => {
+	// 		console.log('Error:', error);
+	// 	})
+	// })
+	.then((response) => {
+		console.log("Response from /dresses:", response.data);
+		
+		// Store the data in localStorage
+		localStorage.setItem("dressesData", JSON.stringify(response.data.flaskData.data));
+		console.log("Data saved to localStorage:", localStorage.getItem("dressesData"));
+
+		// Redirect to results.html
+		
+	
+		window.location.href = "results.html";
 	})
+	.catch((error) => {
+		console.log("Error:", error);
+	});
+})
 		
 	.catch(error => {
 			console.log('Error:', error);
 		});
 }
-

@@ -3,16 +3,6 @@
 const imgElement = document.getElementById("imgsrc");
 const fileElement = document.getElementById("fileInput") ;
 const analyseBtn = document.getElementById("analyse");
-<<<<<<< HEAD
-<<<<<<< HEAD
-var bdindex = 0;
-var array;
-=======
-=======
-
->>>>>>> ba3af46a4fc4a68d219d8d3fed0fc1e33ce7e59c
-var selectedItems=[];
->>>>>>> 48fd57bd18dfacb002d566a3d6b7b51232124e55
 
 fileElement.addEventListener("change" , (e)=>{
 	imgElement.src = URL.createObjectURL(e.target.files[0]);

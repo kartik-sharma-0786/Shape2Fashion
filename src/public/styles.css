@@ -1,7 +1,7 @@
 /* Custom CSS */
 :root {
     --primary-color: #fff; /* White text and elements */
-    --secondary-color: #e92020; /* Dark background */
+    --secondary-color: #000; /* Dark background */
     --highlight-color: #4a90e2; /* Blue highlight color */
     --border-radius: 8px;
     --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);

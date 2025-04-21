@@ -4,8 +4,6 @@ const imgElement = document.getElementById("imgsrc");
 const fileElement = document.getElementById("fileInput") ;
 const analyseBtn = document.getElementById("analyse");
 
-var selectedItems=[];
-
 fileElement.addEventListener("change" , (e)=>{
 	imgElement.src = URL.createObjectURL(e.target.files[0]);
 });

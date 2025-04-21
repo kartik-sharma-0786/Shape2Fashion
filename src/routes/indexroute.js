@@ -8,7 +8,6 @@ const FormData = require('form-data');
 
 const upload = multer({ dest: 'uploads/' });
 
-const bdindex=0;
 
 
 

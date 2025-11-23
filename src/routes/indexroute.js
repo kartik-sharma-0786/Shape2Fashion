@@ -1,104 +1,70 @@
 var express = require("express");
 var path = require("path");
 var router = express.Router();
-const multer = require('multer');
-const axios = require('axios');
-const fs = require('fs');
-const FormData = require('form-data');
+const multer = require("multer");
+const axios = require("axios");
+const fs = require("fs");
+const FormData = require("form-data");
 
-const upload = multer({ dest: 'uploads/' });
+const upload = multer({ dest: "uploads/" });
 
-
-
-
-router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "index.html"));
+// Serve frontend
+router.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-router.post('/upload', upload.single('file'), async (req, res) => {
-    try {
-        const filePath = req.file.path;
+// =============================
+// Upload image → Flask /predict
+// =============================
+router.post("/upload", upload.single("file"), async (req, res) => {
+  try {
+    const filePath = req.file.path;
 
-        // Create form data and append the file stream
-        const formData = new FormData();
-        formData.append('file', fs.createReadStream(filePath));
+    // Create form data and append file stream
+    const formData = new FormData();
+    formData.append("file", fs.createReadStream(filePath));
 
-        // Manually set the headers for multipart form data
-        const headers = {
-            ...formData.getHeaders(), // Get headers from form-data (if possible)
-            'Content-Type': 'multipart/form-data'
-        };
+    const headers = formData.getHeaders();
 
-        // Post the form data to the Flask server
-        const response = await axios.post('http://127.0.0.1:5000/predict', formData, { headers });
+    // Forward to Flask server
+    const response = await axios.post(
+      "https://saber07-modelbodyshape.hf.space/predict",
+      formData,
+      { headers }
+    );
 
-        console.log(response.data);  // Log the prediction result from Flask
-        res.json(response.data);     // Send prediction result to the client
-    } catch (error) {
-        console.error("Error in prediction:", error);
-        res.status(500).send('Error in prediction');
-    }
+    console.log("Flask prediction response:", response.data);
+    res.json(response.data);  // Send back Flask's prediction result
+  } catch (error) {
+    console.error("Error in prediction:", error.message);
+    res.status(500).json({ error: "Error in prediction" });
+  }
 });
 
-
-
+// =============================
+// Dresses query → Flask /query
+// =============================
 router.post("/dresses", async (req, res) => {
-    console.log('Headers:', req.headers);
-    //console.log('Raw body:', req.body);
-    let data = '';
-    req.on('data', chunk => {
-        data += chunk;
-    });
-    
-    req.on('end', async () => {
-        console.log('Raw data received:', data);
+  try {
+    const body_shape = req.body.body_shape; // match Flask parameter name
+    console.log("okk till now");
+    if (!body_shape) {
+      return res.status(400).json({ error: "Provide body_shape parameter" });
+    }
 
-        try {
-            const parsedData = JSON.parse(data);
-            console.log('Parsed data:', parsedData);
+    // Call Flask server
+    const response = await axios.get(
+      `https://saber07-modelbodyshape.hf.space/query?body_shape=${encodeURIComponent(body_shape)}`
+    );
 
-            // Forward the parsed data to the Flask server
-            const flaskResponse = await axios.post("http://127.0.0.1:5000/query", parsedData, {
-                headers: { "Content-Type": "application/json" }
-            });
+    console.log("Flask dresses response:", response.data);
 
-            // Log Flask's response
-            console.log("Response from Flask:", flaskResponse.data);
-
-            // Send back Flask's response to the original client
-            res.json({ message: "Data processed successfully", flaskData: flaskResponse.data });
-        } catch (e) {
-            console.error('Error parsing JSON or forwarding to Flask:', e);
-            res.status(500).json({ error: "Error processing data" });
-        }
-    });
-    });
-
-    // router.get("/dresses", async (req, res) => {
-    //     const { bodyShape, items } = req.query;
-    
-    //     if (!bodyShape || !items) {
-    //         return res.status(400).json({ error: "Missing bodyShape or items query parameters" });
-    //     }
-    
-    //     try {
-    //         // Convert items to an array if it’s not already (handles single item as a string)
-    //         const itemsArray = Array.isArray(items) ? items : [items];
-    
-    //         // Send the query parameters to the Flask server
-    //         const flaskResponse = await axios.get("http://127.0.0.1:5000/query", {
-    //             params: { bodyShape, items: itemsArray },
-    //             headers: { "Content-Type": "application/json" }
-    //         });
-    
-    //         console.log("GET Response from Flask:", flaskResponse.data);
-    //         res.json({ message: "Data retrieved successfully", flaskData: flaskResponse.data });
-    //     } catch (error) {
-    //         console.error("Error in GET request to Flask:", error);
-    //         res.status(500).json({ error: "Error retrieving data" });
-    //     }
-    // });
-    
-
+    // Return dresses list to client
+    res.json(response.data);
+  } catch (error) {
+    console.error("Error fetching dresses:", error.message);
+    res.status(500).json({ error: "Error fetching dresses" });
+  }
+});
 
 module.exports = router;

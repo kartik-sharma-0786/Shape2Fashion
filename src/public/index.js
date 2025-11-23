@@ -1,5 +1,3 @@
-
-
 const imgElement = document.getElementById("imgsrc");
 const fileElement = document.getElementById("fileInput") ;
 const analyseBtn = document.getElementById("analyse");
@@ -42,10 +40,9 @@ function uploadFile(file)
 	})
 	.then(response => {
 			console.log("file upload successfull" , response.data);
-			const predictionArray = response.data.prediction[0];  
-			const highestValueIndex = predictionArray.indexOf(Math.max(...predictionArray));
-			console.log("Index of highest value:", highestValueIndex);  
-			const highestValue = predictionArray[highestValueIndex];
+
+			const predictionArray = response.data.predicted_class; 
+			const highestValue = predictionArray
 			console.log("Highest value:", highestValue);
 			const bodyShapeMap = [
 				"rectangle",       // 0
@@ -55,7 +52,7 @@ function uploadFile(file)
 				"pear"             // 4
 			];
 
-			const bodyShape = bodyShapeMap[highestValueIndex];
+			const bodyShape = bodyShapeMap[highestValue];
 			//res.json({ bodyShape, predictionData: response.data });
 
 
@@ -65,7 +62,7 @@ function uploadFile(file)
 		
 		
 		const payload = {
-			bodyShape: bodyShape,
+			body_shape: bodyShape,
 			items: selectedItems
 		};
 		
@@ -85,7 +82,7 @@ function uploadFile(file)
 		console.log("Response from /dresses:", response.data);
 		
 		// Store the data in localStorage
-		localStorage.setItem("dressesData", JSON.stringify(response.data.flaskData.data));
+		localStorage.setItem("dressesData", JSON.stringify(response.data));
 		console.log("Data saved to localStorage:", localStorage.getItem("dressesData"));
 
 		// Redirect to results.html

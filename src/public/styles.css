@@ -1,253 +1,235 @@
-/* Custom CSS */
+/* Shape2Fashion Modern Dark Theme */
 :root {
-    --primary-color: #fff; /* White text and elements */
-    --secondary-color: #000; /* Dark background */
-    --highlight-color: #4a90e2; /* Blue highlight color */
-    --border-radius: 8px;
-    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --bg-color: #0f0f0f;
+    --surface-color: #18181b;
+    --primary-color: #8b5cf6; /* Violet */
+    --primary-hover: #7c3aed;
+    --text-primary: #ffffff;
+    --text-secondary: #a1a1aa;
+    --border-color: #27272a;
+    --radius: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.big {
-display: flex;
-flex-direction: row;
-}
-/* Camera Section */
-.camera-section {
-    background: var(--secondary-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    overflow: hidden;
-    /* display: flex; Use flexbox to align items side by side */
-    justify-content: space-between;
-    padding: 1rem;
+.main-wrapper {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-/* Camera Section Layout */
-.camera {
+.container {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    background-color: var(--surface-color);
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+    border: 1px solid var(--border-color);
+}
+
+/* --- LEFT COLUMN: CAMERA --- */
+.visual-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /* flex: 1; */
-    margin-right: 1rem;
+    gap: 1.5rem;
 }
 
-#video {
-    border-radius: var(--border-radius);
+.header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #fff, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.camera-box {
     background-color: #000;
+    border-radius: var(--radius);
+    height: 450px;
     width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-}
-
-.img-preview {
-    max-width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
-    display: block;
-    margin: 0 auto;
-}
-
-/* Output Section */
-.output {
-    /* flex: 1; Takes up the remaining space */
-    margin-left: 1rem;
-    /* display: flex; */
-    flex-direction: column;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    border: 2px dashed var(--border-color);
+    position: relative;
+    overflow: hidden;
 }
 
-/* Upload Form */
-.upload-form {
-    background: var(--secondary-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    padding: 2rem;
+/* Ensure Video and Images fit correctly */
+#video, #photo, #imgsrc {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Keeps aspect ratio */
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-/* Wear Options Grid */
-.options-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+#canvas {
+    display: none; /* Hide canvas by default, JS uses it */
+}
+
+.camera-actions {
+    display: flex;
     gap: 1rem;
-    margin-top: 1rem;
+    justify-content: center;
 }
 
-/* Form Check */
-.form-check {
-    padding: 0.5rem;
-    background-color: var(--secondary-color);
-    border-radius: var(--border-radius);
-    /* display: flex; */
-    align-items: center;
-    gap: 0.5rem;
+/* --- RIGHT COLUMN: CONTROLS --- */
+.controls-section {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--border-color);
+    padding-left: 2rem;
 }
 
-/* Buttons */
-.btn {
-    padding: 0.75rem 1.5rem;
-    font-weight: 500;
+/* Make form take full height to push button to bottom */
+.controls-section form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.control-group h3 {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    background-color: var(--highlight-color);
-    color: var(--primary-color);
-    border: none;
-    border-radius: var(--border-radius);
+    letter-spacing: 1.5px;
+    font-weight: 600;
 }
 
-.btn-primary:hover {
-    background-color: #0072e5; /* Darker blue on hover */
-    transform: translateY(-1px);
+/* --- CLOTHING GRID (IMAGE BUTTONS) --- */
+.clothing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
 }
 
-.btn-success {
-    font-size: 1.1rem;
-    margin-top: 1rem;
+.clothing-option {
+    position: relative;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .options-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .container {
-        padding: 1rem;
-    }
-
-    /* Adjust the camera section for smaller screens */
-    .camera-section {
-        /* flex-direction: column; */
-        align-items: center;
-    }
-
-    /* Ensure output section also stacks on mobile */
-    .output {
-        margin-left: 0;
-        margin-top: 1rem;
-    }
-}
-
-/* Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.camera-section, .upload-form {
-    animation: fadeIn 0.5s ease-out;
-}
-
-/* Output Image */
-#photo {
-    max-width: 100%;
-    border-radius: var(--border-radius);
-    margin-top: 1rem;
+/* Hide default checkbox */
+.clothing-option input[type="checkbox"] {
     display: none;
 }
 
-#photo:not([src=""]) {
-    display: block;
+/* The Clickable Card */
+.clothing-option label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #27272a;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-/* Canvas */
-#canvas {
-    position: absolute;
-    left: -9999px;
+.clothing-option img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    opacity: 0.7;
+    transition: 0.2s;
 }
 
-/* Form Control Customization */
-.form-control {
-    border: 2px solid #e0e0e0;
-    padding: 0.75rem;
-    transition: border-color 0.3s ease;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+.clothing-option span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
 }
 
-.form-control:focus {
-    border-color: var(--highlight-color);
-    box-shadow: none;
+/* Hover State */
+.clothing-option label:hover {
+    background-color: #3f3f46;
 }
 
-/* Checkbox Customization */
-.form-check-input:checked {
-    background-color: var(--highlight-color);
-    border-color: var(--highlight-color);
+/* CHECKED STATE */
+.clothing-option input:checked + label {
+    background-color: rgba(139, 92, 246, 0.15);
+    border-color: var(--primary-color);
 }
 
-/* Header Styling */
-.display-4 {
-    color: var(--primary-color);
+.clothing-option input:checked + label img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.clothing-option input:checked + label span {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* --- BUTTON STYLES --- */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 24px;
+    border-radius: var(--radius);
     font-weight: 600;
-    margin-bottom: 2rem;
-}
-
-/* Card Customization */
-.card {
+    cursor: pointer;
+    transition: all 0.2s;
     border: none;
-    transition: transform 0.3s ease;
+    font-size: 1rem;
 }
 
-.card:hover {
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    min-width: 140px;
+}
+
+.btn-outline:hover {
+    background: var(--border-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%; /* Full width for Analyse button */
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
     transform: translateY(-2px);
 }
 
-/* Make photo and video divs side by side */
-.camera-section {
-    display: flex;
-    justify-content: space-between;
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .container { grid-template-columns: 1fr; }
+    .controls-section { border-left: none; padding-left: 0; padding-top: 2rem; border-top: 1px solid var(--border-color); }
+    .clothing-grid { grid-template-columns: repeat(3, 1fr); }
+    .camera-box { height: 350px; }
 }
-
-.camera, .output {
-    flex: 1;
-    margin: 0 1rem;
-}
-
-#photo {
-    display: block;
-    max-width: 100%;
-    border-radius: var(--border-radius);
-}
-
-/* Adjust video section styling */
-#video {
-    max-width: 100%;
-    border-radius: var(--border-radius);
-}
-
-/* Additional Styling for Inputs and Labels */
-label, .caption {
-    color: var(--primary-color);
-}
-
-input[type="file"], input[type="checkbox"] {
-    background-color: var(--secondary-color);
-    border: 1px solid #fff;
-    color: var(--primary-color);
-}
-
-input[type="checkbox"]:checked {
-    background-color: var(--highlight-color);
-    border-color: var(--highlight-color);
-}
-
-input[type="file"]:hover, input[type="checkbox"]:hover {
-    border-color: var(--highlight-color);
-}
-
